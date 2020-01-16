@@ -1,0 +1,94 @@
+{
+	"id": "com.demo.gauge",
+	"version": "1.0.0",
+	"name": "Demo Gauge",
+	"description": "A gauge demo",
+	"newInstancePrefix": "Gauge",
+	"icon": "https://faninsights.github.io/Fantasy/icon.png",
+	"vendor": "Demo",
+	"eula": "EULA",
+	"license": "1.0",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-demo-gauge",
+			"url": "https://faninsights.github.io/Fantasy/gauge.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		},
+		{
+			"kind": "styling",
+			"tag": "com-demo-gauge-styling",
+			"url": "https://faninsights.github.io/Fantasy/gauge_styling.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		},
+		{
+			"kind": "builder",
+			"tag": "com-demo-gauge-builder",
+			"url": "https://faninsights.github.io/Fantasy/gauge_builder.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}
+	],
+	"properties": {
+		"color": {
+			"type": "string",
+			"description": "Text Color info",
+			"default": "#3498db"
+		},
+		"value": {
+			"type": "number",
+			"description": "Gauge value",
+			"default": "0"
+		},
+        "info": {
+			"type": "string",
+			"description": "Gauge info",
+			"default": ""
+		},
+		"width": {
+			"type": "integer",
+			"default": 100
+		},
+		"height": {
+			"type": "integer",
+			"default": 100
+		}
+	},
+	"methods": {
+		"setValue": {
+			"description": "Sets the Gauge value.",
+			"parameters": [
+				{
+					"name": "newValue",
+					"type": "number",
+					"description": "Gauge value"
+				},
+				{
+					"name": "newInfo",
+					"type": "string",
+					"description": "Gauge Info"
+				},
+				{
+					"name": "newColor",
+					"type": "string",
+					"description": "Text Color Info"
+				}
+			],
+			"body": "this.value = newValue; this.info = newInfo; this.color = newColor;"
+		},
+		"getValue": {
+			"returnType": "number",
+			"description": "Returns the Gauge value.",
+			"body": "return this.value;"
+		}
+	},
+	"events": {
+		"onClick": {
+			"description": "Called when the user clicks the Box."
+		}
+	}
+}
+
+ 
