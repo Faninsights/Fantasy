@@ -5,20 +5,20 @@ var getScriptPromisify = (src) => {
 }
 
 (function () {
-  const prepared = document.createElement('template');
-  prepared.innerHTML = `
+  const CFO = document.createElement('template');
+  CFO.innerHTML = `
       <style>
       </style>
       <div id="root" style="width: 100%; height: 100%;">
       </div>
     `;
 	
-  class SamplePrepared extends HTMLElement {
+  class SampleCFO extends HTMLElement {
     constructor () {
       super();
 
       this._shadowRoot = this.attachShadow({ mode: 'open' });
-      this._shadowRoot.appendChild(prepared.content.cloneNode(true));
+      this._shadowRoot.appendChild(CFO.content.cloneNode(true));
 
       this._root = this._shadowRoot.getElementById('root');
 
@@ -107,5 +107,5 @@ var getScriptPromisify = (src) => {
     }
   }
 
-  customElements.define('com-sap-sample-echarts-prepared', SamplePrepared);
+  customElements.define('com-sap-sample-echarts-CFO', SampleCFO);
 })()
