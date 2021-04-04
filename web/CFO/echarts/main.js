@@ -5,35 +5,36 @@ var getScriptPromisify = (src) => {
 }
 
 (function () {
-  const prepared = document.createElement('template')
+  const prepared = document.createElement('template');
   prepared.innerHTML = `
       <style>
       </style>
       <div id="root" style="width: 100%; height: 100%;">
       </div>
-    `
+    `;
+	
   class SamplePrepared extends HTMLElement {
     constructor () {
-      super()
+      super();
 
-      this._shadowRoot = this.attachShadow({ mode: 'open' })
-      this._shadowRoot.appendChild(prepared.content.cloneNode(true))
+      this._shadowRoot = this.attachShadow({ mode: 'open' });
+      this._shadowRoot.appendChild(prepared.content.cloneNode(true));
 
-      this._root = this._shadowRoot.getElementById('root')
+      this._root = this._shadowRoot.getElementById('root');
 
-      this._props = {}
+      this._props = {};
 
-      this.render()
+      this.render();
     }
 
     onCustomWidgetResize (width, height) {
-      this.render()
+      this.render();
     }
 
     async render () {
-      await getScriptPromisify('https://cdn.bootcdn.net/ajax/libs/echarts/5.0.0/echarts.min.js')
+      await getScriptPromisify('https://cdn.bootcdn.net/ajax/libs/echarts/5.0.0/echarts.min.js');
 
-      const chart = echarts.init(this._root)
+      const chart = echarts.init(this._root);
       const option = {
         // https://echarts.apache.org/examples/zh/index.html
 		    title: {
@@ -101,10 +102,10 @@ var getScriptPromisify = (src) => {
             }
         }
     ]
-      }
-      chart.setOption(option)
+      };
+      chart.setOption(option);
     }
   }
 
-  customElements.define('com-sap-sample-echarts-prepared', SamplePrepared)
+  customElements.define('com-sap-sample-echarts-prepared', SamplePrepared);
 })()
