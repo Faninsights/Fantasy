@@ -2,15 +2,15 @@
   "eula": "",
   "vendor": "SAP",
   "license": "",
-  "id": "com.sap.sac.sample.echarts.prepared",
+  "id": "com.sap.sac.sample.echarts.CFO",
   "version": "1.0.0",
-  "name": "ECharts Prepared",
-  "newInstancePrefix": "EChartPrepared",
-  "description": "A sample custom widget wrapped EChart Prepared",
+  "name": "ECharts CFO",
+  "newInstancePrefix": "EChartCFO",
+  "description": "A sample custom widget wrapped EChart CFO",
   "webcomponents": [
     {
       "kind": "main",
-      "tag": "com-sap-sample-echarts-prepared",
+      "tag": "com-sap-sample-echarts-CFO",
       "url": "https://faninsights.github.io/Fantasy/web/CFO/echarts/main.js",
       "integrity": "",
       "ignoreIntegrity": true
