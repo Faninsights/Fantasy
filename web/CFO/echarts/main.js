@@ -33,7 +33,7 @@ var getScriptPromisify = (src) => {
     async render () {
       await getScriptPromisify('https://cdn.bootcdn.net/ajax/libs/echarts/5.0.0/echarts.min.js')
 
-      const chart = echarts.init(this._root)
+      const chart = echarts.init(this._root, 'dart')
       const option = {
         // https://echarts.apache.org/examples/zh/index.html
 		title: {
@@ -42,7 +42,7 @@ var getScriptPromisify = (src) => {
     },
     tooltip: {
         trigger: 'axis'
-    },
+    },      
     legend: {
         data: ['蒸发量', '降水量']
     },
