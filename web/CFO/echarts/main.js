@@ -33,7 +33,7 @@ var getScriptPromisify = (src) => {
     async render () {
       await getScriptPromisify('https://cdn.bootcdn.net/ajax/libs/echarts/5.0.0/echarts.min.js')
 
-      const chart = echarts.init(this._root, 'dark')
+      const chart = echarts.init(this._root)
       const option = {
         // https://echarts.apache.org/examples/zh/index.html
 		title: {
@@ -47,7 +47,7 @@ var getScriptPromisify = (src) => {
         data: ['蒸发量', '降水量']
     },
     toolbox: {
-        show: true,
+        show: false,
         feature: {
             dataView: {show: true, readOnly: false},
             magicType: {show: true, type: ['line', 'bar']},
