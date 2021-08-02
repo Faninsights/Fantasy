@@ -38,7 +38,7 @@ var getScriptPromisify = (src) => {
         // https://echarts.apache.org/examples/zh/index.html
 		title: {
         text: '某地区蒸发量和降水量',
-        subtext: '纯属虚构'
+        subtext: '纯属虚构 假的'
     },
     tooltip: {
         trigger: 'axis'
@@ -52,7 +52,7 @@ var getScriptPromisify = (src) => {
             dataView: {show: true, readOnly: false},
             magicType: {show: true, type: ['line', 'bar']},
             restore: {show: true},
-           // saveAsImage: {show: false}
+            saveAsImage: {show: false}
         }
     },
     calculable: true,
