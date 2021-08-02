@@ -47,12 +47,12 @@ var getScriptPromisify = (src) => {
         data: ['蒸发量', '降水量']
     },
     toolbox: {
-        show: false,
+        show: true,
         feature: {
             dataView: {show: true, readOnly: false},
             magicType: {show: true, type: ['line', 'bar']},
             restore: {show: true},
-            saveAsImage: {show: true}
+            saveAsImage: {show: false}
         }
     },
     calculable: true,
